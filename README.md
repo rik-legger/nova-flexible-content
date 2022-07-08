@@ -11,7 +11,7 @@ This Fork could potentially be retired in the future if Whitecube implements thi
 ## Quick start
 
 Here's a very condensed guide to get you started asap.
-See the full docs at [https://fomrfeed-uk.github.io/nova-flexible-content](https://formfeed-uk.github.io/nova-flexible-content)
+See the full docs at [https://formfeed-uk.github.io/nova-flexible-content](https://formfeed-uk.github.io/nova-flexible-content)
 
 ### Install
 
