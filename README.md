@@ -1,22 +1,35 @@
-# ![Laravel Nova Flexible Content](https://github.com/whitecube/nova-flexible-content/raw/master/title.png)
+# Laravel Nova Flexible Content (Fork) 
 
 ![](https://img.shields.io/github/release/whitecube/nova-flexible-content.svg?style=flat)
 [![](https://img.shields.io/packagist/dt/whitecube/nova-flexible-content.svg?colorB=green&style=flat)](https://packagist.org/packages/whitecube/nova-flexible-content)
 [![](https://img.shields.io/github/license/whitecube/nova-flexible-content.svg?style=flat)](https://github.com/whitecube/nova-flexible-content/blob/master/LICENSE)
 
-An easy & complete Flexible Field for Laravel Nova, perfect for repeated and flexible field groups.
+This is a fork of the excellent Whitecube Nova Flexible Content package that allows for using DependsOn on fields within a Flexible Content Layout, and on the flexible content field itself (with some caveats).
 
-![Laravel Nova Flexible Content in action](https://user-images.githubusercontent.com/9298484/164532562-6e4e4179-8a53-470c-97c8-237e9a2c2ebb.gif)
+This Fork could potentially be retired in the future if Whitecube implements this functionality themselves. For now it shall be assumed that they have no intention of implementing this functionality. 
 
 ## Quick start
 
 Here's a very condensed guide to get you started asap.
-See the full docs at [https://whitecube.github.io/nova-flexible-content](https://whitecube.github.io/nova-flexible-content)
+See the full docs at [https://fomrfeed-uk.github.io/nova-flexible-content](https://formfeed-uk.github.io/nova-flexible-content)
 
 ### Install
 
+This fork will not initially be in Composer to reduce confusion with the main package. Should it become clear over time there is a need for this package this may change.
+
+Until then add this as a git repository in your composer.json and then require as normal:
+
+```php
+"repositories": [
+    {
+        "type": "git",
+        "url": "https://github.com/formfeed-uk/nova-flexible-content"
+    }
+]
 ```
-composer require whitecube/nova-flexible-content
+
+```
+composer require formfeed-uk/nova-flexible-content
 ```
 
 ### Usage
@@ -190,6 +203,8 @@ When adding a new feature or fixing a bug, please add corresponding unit tests. 
 Run PHPUnit by calling `composer test`.
 
 ## Made with ❤️ for open source
+
+If you want to support this, please support the developers of the original package: 
 
 At [Whitecube](https://www.whitecube.be) we use a lot of open source software as part of our daily work.
 So when we have an opportunity to give something back, we're super excited!
