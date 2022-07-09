@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\Commands;
+namespace Formfeed\NovaFlexibleContent\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

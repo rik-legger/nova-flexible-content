@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\Http\Middleware;
+namespace Formfeed\NovaFlexibleContent\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

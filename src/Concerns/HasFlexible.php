@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\Concerns;
+namespace Formfeed\NovaFlexibleContent\Concerns;
 
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 use Whitecube\NovaFlexibleContent\Layouts\Collection;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent;
+namespace Formfeed\NovaFlexibleContent;
 
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Field;

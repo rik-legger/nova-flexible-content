@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\FileAdder;
+namespace Formfeed\NovaFlexibleContent\FileAdder;
 
 use Spatie\MediaLibrary\Exceptions\FileCannotBeAdded\DiskDoesNotExist;
 use Spatie\MediaLibrary\Exceptions\FileCannotBeAdded\FileDoesNotExist;

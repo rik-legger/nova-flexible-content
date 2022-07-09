@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\FileAdder;
+namespace Formfeed\NovaFlexibleContent\FileAdder;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\MediaCollections\FileAdderFactory as OriginalFileAdderFactory;

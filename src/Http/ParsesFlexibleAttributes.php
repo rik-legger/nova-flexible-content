@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\Http;
+namespace Formfeed\NovaFlexibleContent\Http;
 
 use Illuminate\Http\Request;
 use Whitecube\NovaFlexibleContent\Http\FlexibleAttribute;

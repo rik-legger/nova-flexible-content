@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\Http;
+namespace Formfeed\NovaFlexibleContent\Http;
 
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Str;

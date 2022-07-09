@@ -1,6 +1,6 @@
 <?php
 
-namespace Formfeed-UK\NovaFlexibleContent\Layouts;
+namespace Formfeed\NovaFlexibleContent\Layouts;
 
 use Illuminate\Support\Collection as BaseCollection;
 
