@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent\Http\Middleware;
+namespace Formfeed-UK\NovaFlexibleContent\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

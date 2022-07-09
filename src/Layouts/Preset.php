@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent\Layouts;
+namespace Formfeed-UK\NovaFlexibleContent\Layouts;
 
 use Whitecube\NovaFlexibleContent\Flexible;
 

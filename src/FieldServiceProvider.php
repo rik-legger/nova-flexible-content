@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent;
+namespace Formfeed-UK\NovaFlexibleContent;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent\Commands;
+namespace Formfeed-UK\NovaFlexibleContent\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

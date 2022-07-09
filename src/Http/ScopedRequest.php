@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent\Http;
+namespace Formfeed-UK\NovaFlexibleContent\Http;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 

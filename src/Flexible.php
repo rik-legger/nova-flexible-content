@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent;
+namespace Formfeed-UK\NovaFlexibleContent;
 
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Field;

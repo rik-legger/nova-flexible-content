@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitecube\NovaFlexibleContent\Value;
+namespace Formfeed-UK\NovaFlexibleContent\Value;
 
 use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
