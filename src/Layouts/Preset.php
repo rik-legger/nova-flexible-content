@@ -2,7 +2,7 @@
 
 namespace Formfeed\NovaFlexibleContent\Layouts;
 
-use Whitecube\NovaFlexibleContent\Flexible;
+use Formfeed\NovaFlexibleContent\Flexible;
 
 abstract class Preset
 {

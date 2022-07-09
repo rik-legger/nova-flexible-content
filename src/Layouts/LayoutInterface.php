@@ -2,7 +2,7 @@
 
 namespace Formfeed\NovaFlexibleContent\Layouts;
 
-use Whitecube\NovaFlexibleContent\Http\ScopedRequest;
+use Formfeed\NovaFlexibleContent\Http\ScopedRequest;
 
 interface LayoutInterface
 {

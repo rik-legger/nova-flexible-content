@@ -2,7 +2,7 @@
 
 namespace Formfeed\NovaFlexibleContent\Value;
 
-use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
+use Formfeed\NovaFlexibleContent\Concerns\HasFlexible;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
 class FlexibleCast implements CastsAttributes
@@ -20,7 +20,7 @@ class FlexibleCast implements CastsAttributes
     protected $model;
 
    /**
-     * @return \Whitecube\NovaFlexibleContent\Layouts\Collection|array<\Whitecube\NovaFlexibleContent\Layouts\Layout>
+     * @return \Formfeed\NovaFlexibleContent\Layouts\Collection|array<\Formfeed\NovaFlexibleContent\Layouts\Layout>
      */
     public function get($model, string $key, $value, array $attributes)
     {

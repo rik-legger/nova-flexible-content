@@ -4,7 +4,7 @@ namespace Formfeed\NovaFlexibleContent\Http;
 
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Str;
-use Whitecube\NovaFlexibleContent\Flexible;
+use Formfeed\NovaFlexibleContent\Flexible;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -84,7 +84,7 @@ trait TransformsFlexibleErrors
      *
      * @param  array  $messages
      * @param  string $key
-     * @param  \Whitecube\NovaFlexibleContent\Http\FlexibleAttribute  $attribute
+     * @param  \Formfeed\NovaFlexibleContent\Http\FlexibleAttribute  $attribute
      * @return array
      */
     protected function transformMessages($messages, $key, $attribute)

@@ -5,11 +5,11 @@ namespace Formfeed\NovaFlexibleContent;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
-use Whitecube\NovaFlexibleContent\Commands\CreateCast;
-use Whitecube\NovaFlexibleContent\Commands\CreateLayout;
-use Whitecube\NovaFlexibleContent\Commands\CreatePreset;
-use Whitecube\NovaFlexibleContent\Commands\CreateResolver;
-use Whitecube\NovaFlexibleContent\Http\Middleware\InterceptFlexibleAttributes;
+use Formfeed\NovaFlexibleContent\Commands\CreateCast;
+use Formfeed\NovaFlexibleContent\Commands\CreateLayout;
+use Formfeed\NovaFlexibleContent\Commands\CreatePreset;
+use Formfeed\NovaFlexibleContent\Commands\CreateResolver;
+use Formfeed\NovaFlexibleContent\Http\Middleware\InterceptFlexibleAttributes;
 
 class FieldServiceProvider extends ServiceProvider
 {

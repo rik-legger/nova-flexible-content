@@ -4,9 +4,9 @@ namespace Formfeed\NovaFlexibleContent\Concerns;
 
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\MediaRepository;
-use Whitecube\NovaFlexibleContent\FileAdder\FileAdder;
-use Whitecube\NovaFlexibleContent\FileAdder\FileAdderFactory;
-use Whitecube\NovaFlexibleContent\Flexible;
+use Formfeed\NovaFlexibleContent\FileAdder\FileAdder;
+use Formfeed\NovaFlexibleContent\FileAdder\FileAdderFactory;
+use Formfeed\NovaFlexibleContent\Flexible;
 use Spatie\MediaLibrary\Downloaders\DefaultDownloader;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\InvalidUrl;
@@ -15,7 +15,7 @@ use Laravel\Nova\Nova;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Media;
-use Whitecube\NovaFlexibleContent\Http\ScopedRequest;
+use Formfeed\NovaFlexibleContent\Http\ScopedRequest;
 
 trait HasMediaLibrary {
 
@@ -143,7 +143,7 @@ trait HasMediaLibrary {
      * Should remove all related medias except if shouldDeletePreservingMedia returns true
      *
      * @param  Flexible $flexible
-     * @param  Whitecube\NovaFlexibleContent\Layout $layout
+     * @param  Formfeed\NovaFlexibleContent\Layout $layout
      *
      * @return mixed
      */

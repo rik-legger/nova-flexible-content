@@ -4,7 +4,7 @@ namespace Formfeed\NovaFlexibleContent\Concerns;
 
 use Laravel\Nova\Fields\FieldCollection;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Whitecube\NovaFlexibleContent\Flexible;
+use Formfeed\NovaFlexibleContent\Flexible;
 
 trait HasFlexibleDependsOn {
 

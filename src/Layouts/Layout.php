@@ -7,10 +7,10 @@ use JsonSerializable;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\FieldCollection;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Whitecube\NovaFlexibleContent\Flexible;
-use Whitecube\NovaFlexibleContent\Http\ScopedRequest;
-use Whitecube\NovaFlexibleContent\Http\FlexibleAttribute;
-use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
+use Formfeed\NovaFlexibleContent\Flexible;
+use Formfeed\NovaFlexibleContent\Http\ScopedRequest;
+use Formfeed\NovaFlexibleContent\Http\FlexibleAttribute;
+use Formfeed\NovaFlexibleContent\Concerns\HasFlexible;
 use Illuminate\Database\Eloquent\Concerns\HasAttributes;
 use Illuminate\Database\Eloquent\Concerns\HidesAttributes;
 use Illuminate\Contracts\Support\Arrayable;
@@ -408,7 +408,7 @@ class Layout implements LayoutInterface, JsonSerializable, ArrayAccess, Arrayabl
      * The default behaviour when removed
      *
      * @param  Flexible $flexible
-     * @param  Whitecube\NovaFlexibleContent\Layout $layout
+     * @param  Formfeed\NovaFlexibleContent\Layout $layout
      *
      * @return mixed
      */
