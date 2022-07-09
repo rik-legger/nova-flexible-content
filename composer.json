@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Formfeed-UK\\NovaFlexibleContent\\": "src/"
+            "Formfeed\\NovaFlexibleContent\\": "src/"
         }
     },
     "autoload-dev": {
@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Formfeed-UK\\NovaFlexibleContent\\FieldServiceProvider"
+                "Formfeed\\NovaFlexibleContent\\FieldServiceProvider"
             ]
         }
     },
