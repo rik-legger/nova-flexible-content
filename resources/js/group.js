@@ -80,13 +80,6 @@ export default class Group {
         for (var i = this.fields.length - 1; i >= 0; i--) {
             this.fields[i].validationKey = this.key + '__' + this.fields[i].attribute;
             this.fields[i].uniqueKey = this.key + '-' + this.fields[i].uniqueKey;
-
-            if (this.fields[i].dependsOn) {
-                Object.keys(this.fields[i].dependsOn).forEach(key => {
-                    this.fields[i].dependsOn[`${this.key}__${key}`] = this.fields[i].dependsOn[key];
-                    delete this.fields[i].dependsOn[key];
-                });
-            }
         }
     }
 
