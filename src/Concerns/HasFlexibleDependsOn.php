@@ -28,9 +28,11 @@ trait HasFlexibleDependsOn {
             $fields->each(function ($item, $key) use (&$fields) {
                 if ($item instanceof Flexible) {
                     $fields->forget($key);
-                    $item->meta['layouts']->each(function ($layout) use (&$fields) {
-                        $fields = $fields->merge($this->flattenFields(new FieldCollection($layout->fields())));
-                    });
+                    if (isset($item->meta['layouts'])) {
+                        $item->meta['layouts']->each(function ($layout) use (&$fields) {
+                            $fields = $fields->merge($this->flattenFields(new FieldCollection($layout->fields())));
+                        });
+                    }
                 }
             });
         }
