@@ -4,6 +4,7 @@ namespace Formfeed\NovaFlexibleContent;
 
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\SupportsDependentFields;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Formfeed\NovaFlexibleContent\Http\ScopedRequest;
 use Formfeed\NovaFlexibleContent\Value\Resolver;
@@ -15,6 +16,8 @@ use Formfeed\NovaFlexibleContent\Layouts\Collection as LayoutsCollection;
 
 class Flexible extends Field
 {
+    use SupportsDependentFields;
+
     /**
      * The field's component.
      *
@@ -201,13 +204,17 @@ class Flexible extends Field
     /**
      * Apply a field configuration preset
      *
-     * @param string $classname
+     * @param string|Preset $class
      * @param array $params
      * @return $this
      */
-    public function preset($classname, $params = [])
+    public function preset($class, $params = [])
     {
-        $preset = resolve($classname, $params);
+        if (is_string($class)) {
+            $preset = resolve($class, $params);
+        } else if ($class instanceof Preset) {
+            $preset = $class;
+        }
 
         $preset->handle($this);
 

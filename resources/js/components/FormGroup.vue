@@ -73,7 +73,6 @@
                     :ref="item.attribute"
                     :resource-name="resourceName"
                     :resource-id="resourceId"
-                    :resource="resource"
                     :field="item"
                     :form-unique-id="group.key"
                     :errors="errors"
@@ -86,7 +85,7 @@
 </template>
 
 <script>
-import BehavesAsPanel from '../../../vendor/laravel/nova/resources/js/mixins/BehavesAsPanel.js';
+import BehavesAsPanel from 'nova-mixins/BehavesAsPanel';
 
 export default {
     mixins: [BehavesAsPanel],
