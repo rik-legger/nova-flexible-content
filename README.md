@@ -176,7 +176,7 @@ As explained in the documentation, you can [access nova-page's static content](h
 namespace App\Nova\Templates;
 
 // ...
-use App\Nova\Templates\Concerns\HasFlexible;
+use Whitecube\NovaFlexibleContent\Concerns\HasFlexible;
 
 class Home extends Template
 {

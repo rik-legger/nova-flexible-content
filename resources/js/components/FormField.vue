@@ -1,25 +1,24 @@
 <template>
     <component
-        :dusk="field.attribute"
-        :is="field.fullWidth ? 'FullWidthField' : 'default-field'"
-        :field="field"
+        :dusk="currentField.attribute"
+        :is="currentField.fullWidth ? 'FullWidthField' : 'default-field'"
+        :field="currentField"
         :errors="errors"
-        full-width-content
-        :show-help-text="showHelpText">
+        :show-help-text="showHelpText"
+        full-width-content>
         <template #field>
 
             <div
                 v-if="order.length > 0">
                 <form-nova-flexible-content-group
                     v-for="(group, index) in orderedGroups"
-                    :dusk="field.attribute + '-' + index"
+                    :dusk="currentField.attribute + '-' + index"
                     :key="group.key"
-                    :field="field"
+                    :field="currentField"
                     :group="group"
                     :index="index"
                     :resource-name="resourceName"
                     :resource-id="resourceId"
-                    :resource="resource"
                     :errors="errors"
                     @move-up="moveUp(group.key)"
                     @move-down="moveDown(group.key)"
@@ -29,14 +28,13 @@
 
             <component
                 :layouts="layouts"
-                :is="field.menu.component"
-                :field="field"
+                :is="currentField.menu.component"
+                :field="currentField"
                 :limit-counter="limitCounter"
                 :limit-per-layout-counter="limitPerLayoutCounter"
                 :errors="errors"
                 :resource-name="resourceName"
                 :resource-id="resourceId"
-                :resource="resource"
                 @addGroup="addGroup($event)"
             />
 
@@ -47,19 +45,17 @@
 <script>
 
 import FullWidthField from './FullWidthField';
-import { FormField, HandlesValidationErrors } from 'laravel-nova';
+import { DependentFormField, HandlesValidationErrors } from 'laravel-nova';
 import Group from '../group';
 
 export default {
-    mixins: [FormField, HandlesValidationErrors],
-
-    props: ['resourceName', 'resourceId', 'resource', 'field'],
+    mixins: [HandlesValidationErrors, DependentFormField],
 
     components: { FullWidthField },
 
     computed: {
         layouts() {
-            return this.field.layouts || false
+            return this.currentField.layouts || false
         },
         orderedGroups() {
             return this.order.reduce((groups, key) => {
@@ -69,11 +65,11 @@ export default {
         },
 
         limitCounter() {
-            if (this.field.limit === null || typeof(this.field.limit) == "undefined") {
+            if (this.currentField.limit === null || typeof(this.currentField.limit) == "undefined") {
                 return null;
             }
 
-            return this.field.limit - Object.keys(this.groups).length;
+            return this.currentField.limit - Object.keys(this.groups).length;
         },
 
         limitPerLayoutCounter() {
@@ -106,7 +102,7 @@ export default {
          * Set the initial, internal value for the field.
          */
         setInitialValue() {
-            this.value = this.field.value || [];
+            this.value = this.currentField.value || [];
             this.files = {};
 
             this.populateGroups();
@@ -136,8 +132,8 @@ export default {
                 this.files = {...this.files, ...group.files};
             }
 
-            this.appendFieldAttribute(formData, this.field.attribute);
-            formData.append(this.field.attribute, this.value.length ? JSON.stringify(this.value) : '');
+            this.appendFieldAttribute(formData, this.currentField.attribute);
+            formData.append(this.currentField.attribute, this.value.length ? JSON.stringify(this.value) : '');
 
             // Append file uploads
             for(let file in this.files) {
@@ -182,7 +178,7 @@ export default {
                     this.getLayout(this.value[i].layout),
                     this.value[i].attributes,
                     this.value[i].key,
-                    this.field.collapsed
+                    this.currentField.collapsed
                 );
             }
         },
@@ -204,7 +200,7 @@ export default {
             collapsed = collapsed || false;
 
             let fields = attributes || JSON.parse(JSON.stringify(layout.fields)),
-                group = new Group(layout.name, layout.title, fields, this.field, key, collapsed);
+                group = new Group(layout.name, layout.title, fields, this.currentField, key, collapsed);
 
             this.groups[group.key] = group;
             this.order.push(group.key);
