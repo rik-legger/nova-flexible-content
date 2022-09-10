@@ -1,6 +1,6 @@
 <template>
-  <field-wrapper>
-    <div class="py-6 px-8 w-full">
+  <field-wrapper v-if="field.visible">
+    <div class="py-6 px-8 w-full" >
       <div class="mb-6" v-if="fieldLabel">
         <form-label
           :for="field.attribute"
