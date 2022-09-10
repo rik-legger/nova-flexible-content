@@ -27,7 +27,7 @@ trait HasFlexibleDependsOn {
         if ($fields instanceof FieldCollection) {
             $fields->each(function ($item, $key) use (&$fields) {
                 if ($item instanceof Flexible) {
-                    $fields->forget($key);
+                    $item->resolve($this->resource, $item->attribute);
                     if (isset($item->meta['layouts'])) {
                         $item->meta['layouts']->each(function ($layout) use (&$fields) {
                             $fields = $fields->merge($this->flattenFields(new FieldCollection($layout->fields())));
