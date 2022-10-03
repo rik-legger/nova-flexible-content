@@ -15,7 +15,12 @@ use Laravel\Nova\Nova;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Media;
+<<<<<<< HEAD
 use Formfeed\NovaFlexibleContent\Http\ScopedRequest;
+=======
+use Whitecube\NovaFlexibleContent\Http\ScopedRequest;
+use Whitecube\NovaFlexibleContent\Layouts\Layout;
+>>>>>>> 8095e3a056fea5bb46f0c46c69f3b60cf5197cca
 
 trait HasMediaLibrary {
 
@@ -26,7 +31,7 @@ trait HasMediaLibrary {
      *
      * @return \Spatie\MediaLibrary\HasMedia
      */
-    protected function getMediaModel() : HasMedia
+    public function getMediaModel() : HasMedia
     {
         $model = Flexible::getOriginModel() ?? $this->model;
 
@@ -143,7 +148,11 @@ trait HasMediaLibrary {
      * Should remove all related medias except if shouldDeletePreservingMedia returns true
      *
      * @param  Flexible $flexible
+<<<<<<< HEAD
      * @param  Formfeed\NovaFlexibleContent\Layout $layout
+=======
+     * @param  Layout $layout
+>>>>>>> 8095e3a056fea5bb46f0c46c69f3b60cf5197cca
      *
      * @return mixed
      */
