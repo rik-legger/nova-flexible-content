@@ -1,7 +1,5 @@
 # Laravel Nova Flexible Content (Fork) 
 
-![](https://img.shields.io/github/release/whitecube/nova-flexible-content.svg?style=flat)
-[![](https://img.shields.io/packagist/dt/whitecube/nova-flexible-content.svg?colorB=green&style=flat)](https://packagist.org/packages/whitecube/nova-flexible-content)
 [![](https://img.shields.io/github/license/whitecube/nova-flexible-content.svg?style=flat)](https://github.com/whitecube/nova-flexible-content/blob/master/LICENSE)
 
 This is a fork of the excellent Whitecube Nova Flexible Content package that allows for using DependsOn on fields within a Flexible Content Layout, and on the flexible content field itself (with some caveats).
