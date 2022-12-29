@@ -12,6 +12,7 @@ use Formfeed\NovaFlexibleContent\Layouts\LayoutInterface;
 use Formfeed\NovaFlexibleContent\Layouts\Preset;
 use Formfeed\NovaFlexibleContent\Value\Resolver;
 use Formfeed\NovaFlexibleContent\Value\ResolverInterface;
+use Laravel\Nova\Fields\FieldCollection;
 
 class Flexible extends Field
 {
@@ -642,6 +643,18 @@ class Flexible extends Field
         }
 
         static::$model = $model;
+    }
+
+    public function hasSubfields(): bool
+    {
+        return true;
+    }
+
+    public function getSubfields() : FieldCollection {
+        $this->layouts ??= LayoutsCollection::make([]);
+        return FieldCollection::make($this->layouts->map(function ($layout) {
+            return $layout->fields();
+        })->flatten()->toArray());
     }
 
     /**
