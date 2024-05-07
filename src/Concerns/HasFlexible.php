@@ -7,6 +7,7 @@ use Laravel\Nova\NovaServiceProvider;
 use Formfeed\NovaFlexibleContent\Layouts\Collection;
 use Formfeed\NovaFlexibleContent\Layouts\Layout;
 use Formfeed\NovaFlexibleContent\Value\FlexibleCast;
+use Laravel\Nova\Support\Fluent;
 
 trait HasFlexible
 {
@@ -120,7 +121,7 @@ trait HasFlexible
             $name = $item['layout'] ?? null;
             $key = $item['key'] ?? null;
             $attributes = (array) $item['attributes'] ?? [];
-        } elseif (is_a($item, \stdClass::class)) {
+        } elseif (is_a($item, Fluent::class)) {
             $name = $item->layout ?? null;
             $key = $item->key ?? null;
             $attributes = (array) ($item->attributes ?? []);
