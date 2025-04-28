@@ -16,7 +16,7 @@
         "laravel/framework": "^12.0",
         "laravel/nova": "^5.0",
         "nova-kit/nova-packages-tool": "^2.0",
-        "formfeed-uk/nova-subfield-dependson": "^2.0.0"
+        "formfeed-uk/nova-subfield-dependson": "^dev-patch-1"
     },
     "autoload": {
         "psr-4": {
@@ -32,6 +32,10 @@
         {
             "type": "composer",
             "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/rik-legger/nova-subfield-dependson"
         }
     ],
     "extra": {
